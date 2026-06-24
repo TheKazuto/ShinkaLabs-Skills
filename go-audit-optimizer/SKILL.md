@@ -1,6 +1,6 @@
 ---
 name: go-audit-optimizer
-description: Run a strict security, robustness, performance, and structural-quality audit for Go services and Go codebases. Use for Go audit, Golang security review, Go backend review, Go API audit, Go worker audit, Go performance review, dead-code review, or when reviewing Go services that handle authentication, payments, DeFi, databases, queues, external calls, sensitive data, multi-tenant systems, or production infrastructure.
+description: Audit and optimize Go codebases for security, robustness, performance, dead code, and structural quality. Use for Go/Golang backend, API, worker, DeFi, financial, multi-tenant, database, queue, external-call, or production-readiness reviews.
 ---
 
 # Go Security and Performance Audit
@@ -24,6 +24,8 @@ Start from this baseline:
 > Look for issues that could cause unauthorized access, financial loss, data exposure, service instability, race conditions, resource exhaustion, poor scalability, or long-term code risk.
 > Review the code like a production backend or financial service, even if it is still an MVP.
 > For every confirmed problem, provide the most robust practical solution, plus validation steps.
+
+The audit is complete only after every applicable standard has been checked and every finding includes a robust solution and validation path.
 
 ## Scope Selection
 
