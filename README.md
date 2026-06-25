@@ -1,8 +1,18 @@
+<div align="center">
+
 # ShinkaLabs Skills
 
 Pack de skills para agentes de IA focado em auditoria, segurança, performance, robustez e qualidade de projetos.
 
-Repositório: [TheKazuto/ShinkaLabs-Skills](https://github.com/TheKazuto/ShinkaLabs-Skills)
+[![Pack Version](https://img.shields.io/badge/pack-v1.0.0-111827?style=for-the-badge)](#)
+[![License MIT](https://img.shields.io/badge/license-MIT-16a34a?style=for-the-badge)](#licença)
+[![Skills](https://img.shields.io/badge/skills-8-2563eb?style=for-the-badge)](#skills-incluídas)
+
+[Repositório no GitHub](https://github.com/TheKazuto/ShinkaLabs-Skills)
+
+</div>
+
+---
 
 ## O que este pack oferece
 
@@ -16,6 +26,17 @@ Estas skills ajudam agentes a revisar projetos de forma mais rigorosa, com foco 
 - relatórios de auditoria com evidência, severidade, confiança e plano de correção.
 
 ## Skills incluídas
+
+| Skill | Foco principal |
+|---|---|
+| `go-audit-optimizer` | Auditoria de backends Go/Golang |
+| `rust-backend-audit-optimizer` | Auditoria de backends Rust |
+| `typescript-backend-audit-optimizer` | Auditoria de backends TypeScript/Node.js |
+| `typescript-frontend-audit-optimizer` | Auditoria de frontends TypeScript |
+| `solana-anchor-audit-optimizer` | Auditoria de programas Solana Anchor |
+| `solana-quasar-audit-optimizer` | Auditoria de programas Solana Quasar |
+| `solana-pinocchio-audit-optimizer` | Auditoria de programas Solana Pinocchio |
+| `legal-audit-optimizer` | Auditoria jurídica, privacidade e compliance |
 
 ### `go-audit-optimizer`
 
