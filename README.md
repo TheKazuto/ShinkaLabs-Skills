@@ -1,10 +1,10 @@
 <div align="center">
 
-# ShinkaLabs Skills
+# Shinka Labs Skills
 
 <img src="assets/review-pipeline-v3.svg" alt="Animated review pipeline showing code audited by ShinkaLabs Skills" width="920" />
 
-Skill pack for AI agents focused on audit, security, performance, robustness, and project quality.
+Skill pack for AI agents focused on audit, security, performance, robustness, and project quality. The skills cover both crypto and non-crypto projects.
 
 <p>
   <img src="https://img.shields.io/badge/pack-v1.0.0-2563eb.svg" alt="Pack version" />
