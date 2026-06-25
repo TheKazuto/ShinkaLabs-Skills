@@ -4,90 +4,90 @@
 
 <img src="assets/review-pipeline-v3.svg" alt="Animated review pipeline showing code audited by ShinkaLabs Skills" width="920" />
 
-Pack de skills para agentes de IA focado em auditoria, segurança, performance, robustez e qualidade de projetos.
+Skill pack for AI agents focused on audit, security, performance, robustness, and project quality.
 
 <p>
   <img src="https://img.shields.io/badge/pack-v1.0.0-2563eb.svg" alt="Pack version" />
   <img src="https://img.shields.io/badge/license-MIT-16a34a.svg" alt="License" />
   <img src="https://img.shields.io/badge/skills-8-7c3aed.svg" alt="Skills" />
-  <img src="https://img.shields.io/badge/focus-audit%20%2B%20security-f97316.svg" alt="Focus" />
+  <img src="https://img.shields.io/badge/focus-audit%20%2B%20robustness-f97316.svg" alt="Focus" />
 </p>
 
-[Repositório no GitHub](https://github.com/TheKazuto/ShinkaLabs-Skills)
+[GitHub Repository](https://github.com/TheKazuto/ShinkaLabs-Skills)
 
 </div>
 
 ---
 
-## O que este pack oferece
+## What This Pack Provides
 
-Estas skills ajudam agentes a revisar projetos de forma mais rigorosa, com foco em:
+These skills help agents review projects more rigorously, with focus on:
 
-- segurança de usuários e fundos;
-- robustez de backend, frontend e contratos;
-- performance baseada em evidência;
-- identificação de código morto;
-- recomendações de correção robustas;
-- relatórios de auditoria com evidência, severidade, confiança e plano de correção.
+- user and fund safety;
+- backend, frontend, and smart contract robustness;
+- evidence-based performance review;
+- dead code identification;
+- robust fix recommendations;
+- audit reports with evidence, severity, confidence, and a fix plan.
 
-## Skills incluídas
+## Included Skills
 
-| Skill | Foco principal |
+| Skill | Main focus |
 |---|---|
-| `go-audit-optimizer` | Auditoria de backends Go/Golang |
-| `rust-backend-audit-optimizer` | Auditoria de backends Rust |
-| `typescript-backend-audit-optimizer` | Auditoria de backends TypeScript/Node.js |
-| `typescript-frontend-audit-optimizer` | Auditoria de frontends TypeScript |
-| `solana-anchor-audit-optimizer` | Auditoria de programas Solana Anchor |
-| `solana-quasar-audit-optimizer` | Auditoria de programas Solana Quasar |
-| `solana-pinocchio-audit-optimizer` | Auditoria de programas Solana Pinocchio |
-| `legal-audit-optimizer` | Auditoria jurídica, privacidade e compliance |
+| `go-audit-optimizer` | Go/Golang backend audits |
+| `rust-backend-audit-optimizer` | Rust backend audits |
+| `typescript-backend-audit-optimizer` | TypeScript/Node.js backend audits |
+| `typescript-frontend-audit-optimizer` | TypeScript frontend audits |
+| `solana-anchor-audit-optimizer` | Solana Anchor program audits |
+| `solana-quasar-audit-optimizer` | Solana Quasar program audits |
+| `solana-pinocchio-audit-optimizer` | Solana Pinocchio program audits |
+| `legal-audit-optimizer` | Legal, privacy, and compliance audits |
 
 ### `go-audit-optimizer`
 
-Auditoria de projetos Go/Golang backend, APIs, workers, sistemas financeiros, filas, bancos de dados e serviços de produção. Foca em segurança, performance, robustez, concorrência, código morto e qualidade estrutural.
+Audits Go/Golang backend projects, APIs, workers, financial systems, queues, databases, and production services. Focuses on security, performance, robustness, concurrency, dead code, and structural quality.
 
 ### `rust-backend-audit-optimizer`
 
-Auditoria de projetos Rust backend, APIs, workers, serviços Tokio/Axum/Actix, sistemas financeiros, FFI e código `unsafe`. Foca em segurança, async/concurrency, robustez, performance, código morto e qualidade estrutural.
+Audits Rust backend projects, APIs, workers, Tokio/Axum/Actix services, financial systems, FFI, and `unsafe` code. Focuses on security, async/concurrency, robustness, performance, dead code, and structural quality.
 
 ### `typescript-backend-audit-optimizer`
 
-Auditoria de backends TypeScript/Node.js com Express, NestJS, Fastify, Hono, workers, SaaS, sistemas multi-tenant, autenticação, bancos de dados e filas. Foca em segurança, event loop, dependências, performance, código morto e produção.
+Audits TypeScript/Node.js backends using Express, NestJS, Fastify, Hono, workers, SaaS systems, multi-tenant systems, authentication, databases, and queues. Focuses on security, event-loop safety, dependency risk, performance, dead code, and production readiness.
 
 ### `typescript-frontend-audit-optimizer`
 
-Auditoria de frontends TypeScript em React, Next.js, Vue, Angular, Svelte, Vite, SPAs e dashboards. Foca em XSS, tokens, validação runtime, acessibilidade, privacidade, performance, build safety, código morto e qualidade estrutural.
+Audits TypeScript frontends using React, Next.js, Vue, Angular, Svelte, Vite, SPAs, and dashboards. Focuses on XSS, token handling, runtime validation, accessibility, privacy, performance, build safety, dead code, and structural quality.
 
 ### `solana-anchor-audit-optimizer`
 
-Auditoria de programas Solana no framework Anchor. Foca em constraints, PDAs, CPI, SPL Token/Token-2022, `remaining_accounts`, IDL, account lifecycle, aritmética, compute units, deploy readiness e riscos Sealevel.
+Audits Solana programs built with Anchor. Focuses on constraints, PDAs, CPI, SPL Token/Token-2022, `remaining_accounts`, IDL, account lifecycle, arithmetic, compute units, deploy readiness, and Sealevel risks.
 
 ### `solana-quasar-audit-optimizer`
 
-Auditoria de programas Solana no framework Quasar. Foca em validação de contas, PDAs, CPI, zero-copy, `unsafe`, Token-2022, discriminators, account layout, compute units, código morto e deploy readiness.
+Audits Solana programs built with Quasar. Focuses on account validation, PDAs, CPI, zero-copy, `unsafe`, Token-2022, discriminators, account layout, compute units, dead code, and deploy readiness.
 
 ### `solana-pinocchio-audit-optimizer`
 
-Auditoria de programas Solana no framework Pinocchio e padrões low-level/native. Foca em validação manual de contas, parsing de buffers, zero-copy, `unsafe`, p-token, SPL Token/Token-2022, PDAs, CPI, compute units e testes diferenciais.
+Audits Solana programs built with Pinocchio and low-level/native patterns. Focuses on manual account validation, buffer parsing, zero-copy, `unsafe`, p-token, SPL Token/Token-2022, PDAs, CPI, compute units, and differential tests.
 
 ### `legal-audit-optimizer`
 
-Auditoria jurídica e de compliance para sites, apps e projetos digitais. Ajuda a identificar ausência de termos, políticas, avisos, consentimentos, privacidade, cookies, LGPD/GDPR/CCPA, acessibilidade e outros elementos que podem gerar risco jurídico.
+Audits legal and compliance readiness for websites, apps, and digital projects. Helps identify missing terms, policies, notices, consent flows, privacy elements, cookies, LGPD/GDPR/CCPA gaps, accessibility concerns, and other elements that may create legal risk.
 
-## Como instalar
+## Installation
 
-Cada skill é uma pasta contendo um arquivo `SKILL.md`. Para instalar, copie as pastas das skills para o diretório de skills do seu agente.
+Each skill is a folder containing a `SKILL.md` file. To install the pack, copy the skill folders into your agent's skills directory.
 
-### Instalação no Codex
+### Codex Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/TheKazuto/ShinkaLabs-Skills.git
 ```
 
-2. Copie as skills para a pasta de skills do Codex.
+2. Copy the skills into the Codex skills folder.
 
 Windows:
 
@@ -101,56 +101,56 @@ macOS/Linux:
 cp -R ./ShinkaLabs-Skills/* ~/.codex/skills/
 ```
 
-3. Reinicie o agente ou recarregue as skills, se o seu ambiente exigir.
+3. Restart the agent or reload skills if your environment requires it.
 
-### Instalação em outros agentes
+### Other Agents
 
-Para agentes compatíveis com skills locais:
+For agents compatible with local skills:
 
-1. Abra a pasta de configuração de skills do agente.
-2. Copie as pastas das skills desejadas.
-3. Garanta que cada skill mantenha esta estrutura:
+1. Open the agent's skills configuration folder.
+2. Copy the desired skill folders.
+3. Make sure each skill keeps this structure:
 
 ```text
 skill-name/
 `-- SKILL.md
 ```
 
-4. Reinicie ou recarregue o agente.
+4. Restart or reload the agent.
 
-## Como usar
+## Usage
 
-Depois de instaladas, as skills podem ser ativadas automaticamente quando o pedido do usuário combina com a descrição da skill, ou manualmente pelo nome.
+After installation, skills can activate automatically when the user's request matches the skill description, or manually by name.
 
-Exemplos:
+Examples:
 
 ```text
-Use a skill go-audit-optimizer para auditar este backend Go.
+Use the go-audit-optimizer skill to audit this Go backend.
 ```
 
 ```text
-Use a skill solana-anchor-audit-optimizer para revisar este programa Anchor.
+Use the solana-anchor-audit-optimizer skill to review this Anchor program.
 ```
 
 ```text
-Use a skill legal-audit-optimizer para verificar se este site possui riscos jurídicos.
+Use the legal-audit-optimizer skill to check whether this website has legal risks.
 ```
 
-## Formato esperado das auditorias
+## Expected Audit Format
 
-As skills foram desenhadas para orientar o agente a entregar:
+These skills are designed to guide the agent toward delivering:
 
-- resumo executivo;
-- escopo revisado;
-- lista de problemas encontrados;
-- severidade e confiança de cada achado;
-- evidência concreta;
-- impacto do problema;
-- solução robusta recomendada;
-- mitigação rápida quando útil;
-- comandos, testes ou validações para comprovar a correção;
-- plano de correção ordenado por risco.
+- executive snapshot;
+- reviewed scope;
+- list of findings;
+- severity and confidence for each finding;
+- concrete evidence;
+- impact explanation;
+- robust recommended solution;
+- fast mitigation when useful;
+- commands, tests, or validation steps to prove the fix;
+- risk-ordered fix plan.
 
-## Licença
+## License
 
 MIT

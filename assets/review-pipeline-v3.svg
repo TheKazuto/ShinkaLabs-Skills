@@ -107,7 +107,7 @@
     <text class="label" x="49" y="93">Go</text>
 
     <rect class="chip" x="112" y="74" width="74" height="28" rx="8"/>
-    <text class="label" x="130" y="93">Solana</text>
+    <text class="label" x="135" y="93">Legal</text>
 
     <rect class="chip" x="24" y="110" width="74" height="28" rx="8"/>
     <text class="label" x="47" y="129">Rust</text>
