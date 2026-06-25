@@ -57,11 +57,7 @@
 
     .pulse {
       filter: drop-shadow(0 0 8px currentColor);
-      animation: travel 3.6s ease-in-out infinite;
     }
-
-    .pulse.two { animation-delay: .9s; }
-    .pulse.three { animation-delay: 1.8s; }
 
     .scan {
       animation: scan 2.4s ease-in-out infinite;
@@ -76,13 +72,6 @@
 
     .fix {
       animation: glow 2.8s ease-in-out infinite;
-    }
-
-    @keyframes travel {
-      0% { transform: translateX(0); opacity: 0; }
-      12% { opacity: 1; }
-      88% { opacity: 1; }
-      100% { transform: translateX(360px); opacity: 0; }
     }
 
     @keyframes scan {
@@ -109,8 +98,8 @@
   <rect width="920" height="260" rx="26" fill="var(--bg)"/>
   <rect x="1" y="1" width="918" height="258" rx="25" stroke="#1f2a44"/>
 
-  <g transform="translate(54 52)">
-    <rect class="card" width="210" height="156"/>
+  <g transform="translate(70 50)">
+    <rect class="card" width="210" height="148"/>
     <text class="title" x="24" y="34">Source Code</text>
     <text class="label" x="24" y="56">backend, frontend, contracts</text>
     <line class="code-line" x1="26" y1="84" x2="154" y2="84" stroke="var(--blue)"/>
@@ -118,28 +107,28 @@
     <line class="code-line" x1="26" y1="128" x2="122" y2="128" stroke="var(--orange)"/>
   </g>
 
-  <g transform="translate(354 52)">
-    <rect class="card" width="212" height="156"/>
+  <g transform="translate(355 50)">
+    <rect class="card" width="210" height="148"/>
     <text class="title" x="24" y="34">Audit Skills</text>
     <text class="label" x="24" y="56">security + performance review</text>
 
-    <rect class="mini" x="24" y="78" width="64" height="34"/>
-    <text class="label" x="40" y="100">Go</text>
+    <rect class="mini" x="24" y="78" width="74" height="32"/>
+    <text class="label" x="49" y="98">Go</text>
 
-    <rect class="mini" x="98" y="78" width="86" height="34"/>
-    <text class="label" x="113" y="100">Solana</text>
+    <rect class="mini" x="112" y="78" width="74" height="32"/>
+    <text class="label" x="130" y="98">Solana</text>
 
-    <rect class="mini" x="24" y="122" width="72" height="34"/>
-    <text class="label" x="40" y="144">Rust</text>
+    <rect class="mini" x="24" y="120" width="74" height="32"/>
+    <text class="label" x="47" y="140">Rust</text>
 
-    <rect class="mini" x="106" y="122" width="78" height="34"/>
-    <text class="label" x="126" y="144">TS</text>
+    <rect class="mini" x="112" y="120" width="74" height="32"/>
+    <text class="label" x="141" y="140">TS</text>
 
-    <rect class="scan" x="20" y="72" width="172" height="3" rx="1.5" fill="var(--blue)"/>
+    <rect class="scan" x="24" y="72" width="162" height="3" rx="1.5" fill="var(--blue)"/>
   </g>
 
-  <g transform="translate(656 52)">
-    <rect class="card" width="210" height="156"/>
+  <g transform="translate(640 50)">
+    <rect class="card" width="210" height="148"/>
     <text class="title" x="24" y="34">Audit Report</text>
     <text class="label" x="24" y="56">findings + robust fixes</text>
 
@@ -150,18 +139,27 @@
     <line class="code-line fix" x1="70" y1="124" x2="174" y2="124" stroke="var(--green)"/>
   </g>
 
-  <path class="pipe" d="M284 130 H334"/>
-  <path class="pipe" d="M586 130 H636"/>
+  <path class="pipe" d="M300 128 H335"/>
+  <path class="pipe" d="M585 128 H620"/>
 
-  <circle class="pulse" cx="292" cy="130" r="7" fill="var(--blue)" color="#38bdf8"/>
-  <circle class="pulse two" cx="292" cy="130" r="7" fill="var(--purple)" color="#a78bfa"/>
-  <circle class="pulse three" cx="292" cy="130" r="7" fill="var(--green)" color="#22c55e"/>
+  <circle class="pulse" cx="300" cy="128" r="7" fill="var(--blue)" color="#38bdf8">
+    <animate attributeName="cx" values="300;335;335;300" keyTimes="0;0.45;0.65;1" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".15;1;1;.15" keyTimes="0;0.2;0.75;1" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="pulse" cx="585" cy="128" r="7" fill="var(--purple)" color="#a78bfa">
+    <animate attributeName="cx" values="585;620;620;585" keyTimes="0;0.45;0.65;1" dur="2.8s" begin=".55s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".15;1;1;.15" keyTimes="0;0.2;0.75;1" dur="2.8s" begin=".55s" repeatCount="indefinite"/>
+  </circle>
 
-  <text class="label" x="384" y="232">evidence</text>
-  <circle cx="444" cy="228" r="3" fill="var(--blue)"/>
-  <text class="label" x="462" y="232">severity</text>
-  <circle cx="520" cy="228" r="3" fill="var(--orange)"/>
-  <text class="label" x="538" y="232">confidence</text>
-  <circle cx="620" cy="228" r="3" fill="var(--green)"/>
-  <text class="label" x="638" y="232">fix plan</text>
+  <g transform="translate(270 220)">
+    <rect x="0" y="-18" width="380" height="34" rx="17" fill="rgba(17,24,39,.78)" stroke="#243044"/>
+    <circle cx="24" cy="0" r="3" fill="var(--blue)"/>
+    <text class="label" x="36" y="4">evidence</text>
+    <circle cx="116" cy="0" r="3" fill="var(--orange)"/>
+    <text class="label" x="128" y="4">severity</text>
+    <circle cx="212" cy="0" r="3" fill="var(--green)"/>
+    <text class="label" x="224" y="4">confidence</text>
+    <circle cx="304" cy="0" r="3" fill="var(--purple)"/>
+    <text class="label" x="316" y="4">fix plan</text>
+  </g>
 </svg>
