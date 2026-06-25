@@ -7,6 +7,11 @@ description: Audit and optimize Go codebases for security, robustness, performan
 
 Use this skill to audit Go projects with strong focus on financial safety, backend security, robustness, production readiness, performance, and maintainable Go design.
 
+Skill metadata:
+
+- Version: 1.0.0
+- License: MIT
+
 Prioritize:
 
 1. Financial and user safety
