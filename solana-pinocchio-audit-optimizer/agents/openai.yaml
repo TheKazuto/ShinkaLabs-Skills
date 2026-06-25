@@ -1,0 +1,4 @@
+interface:
+  display_name: "Solana Pinocchio Audit Optimizer"
+  short_description: "Audit Pinocchio Solana programs safely."
+  default_prompt: "Audit this Solana Pinocchio program for manual account validation, PDA safety, CPI security, zero-copy and unsafe soundness, Token-2022 behavior, arithmetic, lifecycle risks, compute usage, dead code, and production readiness."

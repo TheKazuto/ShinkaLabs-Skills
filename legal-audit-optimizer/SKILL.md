@@ -62,6 +62,20 @@ Check common locations:
 
 When evidence is partial, report the uncertainty and say exactly what file, page, vendor, or business detail must be verified.
 
+Use a traceable legal audit flow for non-trivial projects:
+
+- Review incrementally by page, route, layout, policy, form, checkout flow, signup/login flow, vendor, tracker, document, or jurisdiction.
+- Do not mark an element as compliant or present without citing evidence: file, route, page, component, policy section, script, vendor, screenshot, config, or observed flow.
+- If repository size, missing business context, or jurisdiction uncertainty prevents full coverage, state what was reviewed, what was not reviewed, and which legal-risk areas remain.
+- Track each meaningful area with one of these statuses:
+  - **Verified:** evidence supports the legal element or control.
+  - **Issue:** evidence shows a concrete missing element or legal risk.
+  - **Partial:** the element exists but is incomplete, unclear, outdated, or not wired into the actual product.
+  - **Not applicable:** the area does not apply, with reason.
+  - **Needs legal review:** legal interpretation, regulated activity, high-risk clause, or jurisdiction-specific decision requires a qualified lawyer.
+- Add a confidence level to important findings when certainty is not absolute: High, Medium, or Low.
+- Use lower confidence when jurisdiction, audience, data volume, vendors, contracts, payment model, regulated status, or actual production configuration is not fully known.
+
 ## Non-Negotiable Standards
 
 Apply these rules aggressively:
@@ -277,6 +291,15 @@ When multiple remedies exist, distinguish:
 
 ## Output Expectations
 
+Start with a **Legal Readiness Snapshot**:
+
+- Overall legal risk: Critical, High, Medium, or Low
+- Publication stance: Block publication, publish after fixes, or no major blocker found
+- Scope reviewed: pages/routes/policies/forms/vendors/jurisdictions actually inspected
+- Top risks: 3-5 highest-impact gaps or residual concerns
+- Lawyer review needed: yes/no, with topics
+- Assumptions and jurisdictions not verified
+
 Prioritize findings:
 
 1. Missing privacy, consent, data-rights, sensitive-data, or breach-response elements
@@ -291,6 +314,8 @@ Prioritize findings:
 For each finding include:
 
 - Severity: Critical, High, Medium, or Low
+- Status: Issue, Partial, Not applicable, or Needs legal review when relevant
+- Confidence: High, Medium, or Low
 - Affected page/file/flow when available
 - Evidence found or evidence missing
 - What is missing
