@@ -43,6 +43,21 @@ First identify the project shape:
 
 Mark items as not applicable only with a clear reason.
 
+## Evidence and Traceability Protocol
+
+Use a traceable audit flow for non-trivial repositories:
+
+- Inspect code incrementally by package, module, route, handler, middleware, service, repository, worker, job, integration, or business flow.
+- Do not mark an area as safe without citing concrete evidence: file, function, route, config, test, command output, or observed invariant.
+- If repository size or context limits prevent full coverage, state what was reviewed, what was not reviewed, and which high-risk areas remain.
+- Track each meaningful area with one of these statuses:
+  - **Verified:** evidence supports the control or invariant.
+  - **Issue:** evidence shows a concrete problem.
+  - **Partial:** evidence is incomplete or the control exists but has gaps.
+  - **Not applicable:** the area does not apply, with reason.
+- Add a confidence level to important findings when certainty is not absolute: High, Medium, or Low.
+- Use lower confidence when concurrency, reflection, build tags, generated code, runtime configuration, migrations, external services, or missing deployment context make behavior harder to prove.
+
 ## Non-Negotiable Standards
 
 Apply these rules aggressively:
@@ -363,6 +378,14 @@ Good phrases:
 
 ## Output Expectations
 
+Start with an **Executive Snapshot**:
+
+- Overall risk: Critical, High, Medium, or Low
+- Release stance: Block release, release after fixes, or no major blocker found
+- Scope reviewed: packages/modules/flows/configs actually inspected
+- Top risks: 3-5 highest-impact issues or residual concerns
+- Validation run or still needed
+
 Prioritize findings:
 
 1. Financial loss, custody, payment, billing, quota, token, or balance risks
@@ -378,7 +401,10 @@ Prioritize findings:
 For each finding include:
 
 - Severity: Critical, High, Medium, or Low
+- Status: Issue, Partial, or Not applicable when relevant
+- Confidence: High, Medium, or Low
 - File and line reference when available
+- Evidence
 - What can go wrong
 - Why it matters
 - Robust solution
