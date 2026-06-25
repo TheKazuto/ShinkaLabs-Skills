@@ -2,6 +2,8 @@
 
 # ShinkaLabs Skills
 
+<img src="assets/review-pipeline.svg" alt="Animated review pipeline showing code audited by ShinkaLabs Skills" width="920" />
+
 Pack de skills para agentes de IA focado em auditoria, segurança, performance, robustez e qualidade de projetos.
 
 <p>
