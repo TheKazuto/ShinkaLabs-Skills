@@ -4,9 +4,12 @@
 
 Pack de skills para agentes de IA focado em auditoria, segurança, performance, robustez e qualidade de projetos.
 
-[![Pack Version](https://img.shields.io/badge/pack-v1.0.0-111827?style=for-the-badge)](#)
-[![License MIT](https://img.shields.io/badge/license-MIT-16a34a?style=for-the-badge)](#licença)
-[![Skills](https://img.shields.io/badge/skills-8-2563eb?style=for-the-badge)](#skills-incluídas)
+<p>
+  <img src="https://img.shields.io/badge/pack-v1.0.0-2563eb.svg" alt="Pack version" />
+  <img src="https://img.shields.io/badge/license-MIT-16a34a.svg" alt="License" />
+  <img src="https://img.shields.io/badge/skills-8-7c3aed.svg" alt="Skills" />
+  <img src="https://img.shields.io/badge/focus-audit%20%2B%20security-f97316.svg" alt="Focus" />
+</p>
 
 [Repositório no GitHub](https://github.com/TheKazuto/ShinkaLabs-Skills)
 
