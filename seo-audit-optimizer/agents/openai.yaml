@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO Audit Optimizer"
+  short_description: "Audit SEO, GEO, and discoverability."
+  default_prompt: "Audit this website or project for SEO, technical SEO, content quality, structured data, AI visibility, performance, accessibility, and organic discoverability. Provide findings, robust fixes, implementation steps, and validation."

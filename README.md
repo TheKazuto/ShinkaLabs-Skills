@@ -10,7 +10,7 @@ Skill pack for AI agents focused on audit, security, performance, robustness, an
 <p>
   <img src="https://img.shields.io/badge/pack-v1.0.0-2563eb.svg" alt="Pack version" />
   <img src="https://img.shields.io/badge/license-MIT-16a34a.svg" alt="License" />
-  <img src="https://img.shields.io/badge/skills-8-7c3aed.svg" alt="Skills" />
+  <img src="https://img.shields.io/badge/skills-9-7c3aed.svg" alt="Skills" />
   <img src="https://img.shields.io/badge/focus-audit%20%2B%20robustness-f97316.svg" alt="Focus" />
 </p>
 
@@ -43,6 +43,7 @@ These skills help agents review projects more rigorously, with focus on:
 | `solana-quasar-audit-optimizer` | Solana Quasar program audits |
 | `solana-pinocchio-audit-optimizer` | Solana Pinocchio program audits |
 | `legal-audit-optimizer` | Legal, privacy, and compliance audits |
+| `seo-audit-optimizer` | SEO, GEO, and search discoverability audits |
 
 ### `go-audit-optimizer`
 
@@ -75,6 +76,10 @@ Audits Solana programs built with Pinocchio and low-level/native patterns. Focus
 ### `legal-audit-optimizer`
 
 Audits legal and compliance readiness for websites, apps, and digital projects. Helps identify missing terms, policies, notices, consent flows, privacy elements, cookies, LGPD/GDPR/CCPA gaps, accessibility concerns, and other elements that may create legal risk.
+
+### `seo-audit-optimizer`
+
+Audits websites, apps, documentation, landing pages, and product pages for SEO, technical SEO, structured data, content quality, Core Web Vitals, accessibility, GEO/AI visibility, crawlability, indexability, and organic discoverability.
 
 ## Installation
 
@@ -135,6 +140,10 @@ Use the solana-anchor-audit-optimizer skill to review this Anchor program.
 
 ```text
 Use the legal-audit-optimizer skill to check whether this website has legal risks.
+```
+
+```text
+Use the seo-audit-optimizer skill to improve this project's search visibility.
 ```
 
 ## Expected Audit Format
