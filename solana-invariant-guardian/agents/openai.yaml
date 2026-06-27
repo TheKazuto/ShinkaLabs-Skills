@@ -1,4 +1,0 @@
-interface:
-  display_name: "Solana Invariant Guardian"
-  short_description: "Extract, test, and enforce Solana program invariants."
-  default_prompt: "Audit this Solana program for business logic invariants. Extract critical invariants, review account validation, PDAs, authorities, CPIs, tokens, arithmetic, rent, realloc, clients, and off-chain systems. Suggest robust assertions, property-based tests, fuzzing scenarios, adversarial cases, and validation steps."
