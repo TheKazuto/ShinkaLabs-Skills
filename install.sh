@@ -43,6 +43,8 @@ default_dest_for_target() {
 }
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SKILLS_SOURCE_DIR="$SCRIPT_DIR/skill"
+INSTALL_NAME="shinka-labs-audit-pack"
 TARGET="codex"
 DEST="$(default_dest_for_target "$TARGET")"
 DEST_SET=0
@@ -87,43 +89,45 @@ while [[ $# -gt 0 ]]; do
 done
 
 echo "Shinka Labs Skills"
-echo "Source: $SCRIPT_DIR"
+echo "Source: $SKILLS_SOURCE_DIR"
 echo "Target: $TARGET"
 echo "Destination: $DEST"
+echo "Install name: $INSTALL_NAME"
 echo
-
-skill_count=0
 
 if [[ "$DRY_RUN" -eq 0 ]]; then
   mkdir -p "$DEST"
 fi
 
-for skill_dir in "$SCRIPT_DIR"/*; do
-  [[ -d "$skill_dir" ]] || continue
-  [[ -f "$skill_dir/SKILL.md" ]] || continue
-
-  skill_name="$(basename "$skill_dir")"
-  skill_count=$((skill_count + 1))
-
-  if [[ "$DRY_RUN" -eq 1 ]]; then
-    echo "[dry-run] Would install: $skill_name"
-  else
-    rm -rf "$DEST/$skill_name"
-    cp -R "$skill_dir" "$DEST/"
-    echo "Installed: $skill_name"
-  fi
-done
-
-echo
-
-if [[ "$skill_count" -eq 0 ]]; then
-  echo "No skills found. Expected folders containing SKILL.md inside: $SCRIPT_DIR" >&2
+if [[ ! -d "$SKILLS_SOURCE_DIR" ]]; then
+  echo "Error: skills source folder not found: $SKILLS_SOURCE_DIR" >&2
   exit 1
 fi
 
+if [[ ! -f "$SKILLS_SOURCE_DIR/SKILL.md" ]]; then
+  echo "Error: skill entry point not found: $SKILLS_SOURCE_DIR/SKILL.md" >&2
+  exit 1
+fi
+
+module_count="$(find "$SKILLS_SOURCE_DIR" -type f -name '*.md' ! -name 'SKILL.md' | wc -l | tr -d ' ')"
+
 if [[ "$DRY_RUN" -eq 1 ]]; then
-  echo "Dry run complete. Skills found: $skill_count"
+  echo "[dry-run] Would install: $INSTALL_NAME"
+  echo "[dry-run] Entry point: SKILL.md"
+  echo "[dry-run] Focused modules: $module_count"
 else
-  echo "Install complete. Skills installed: $skill_count"
+  rm -rf "$DEST/$INSTALL_NAME"
+  mkdir -p "$DEST/$INSTALL_NAME"
+  cp -R "$SKILLS_SOURCE_DIR"/. "$DEST/$INSTALL_NAME/"
+  echo "Installed: $INSTALL_NAME"
+  echo "Focused modules installed: $module_count"
+fi
+
+echo
+
+if [[ "$DRY_RUN" -eq 1 ]]; then
+  echo "Dry run complete."
+else
+  echo "Install complete."
   echo "Restart or reload your agent so it can discover the new skills."
 fi

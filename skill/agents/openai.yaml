@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shinka Labs Audit Pack"
+  short_description: "Unified audit hub for code, Solana, legal, and SEO reviews."
+  default_prompt: "Use the Shinka Labs Audit Pack to audit this project. Select the relevant focused module, review the repository with evidence, identify risks, and provide robust fixes, implementation paths, and validation steps."

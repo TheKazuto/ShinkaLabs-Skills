@@ -10,7 +10,8 @@ Skill pack for AI agents focused on audit, security, performance, robustness, an
 <p>
   <img src="https://img.shields.io/badge/pack-v1.0.0-2563eb.svg" alt="Pack version" />
   <img src="https://img.shields.io/badge/license-MIT-16a34a.svg" alt="License" />
-  <img src="https://img.shields.io/badge/skills-14-7c3aed.svg" alt="Skills" />
+  <img src="https://img.shields.io/badge/skill-1-7c3aed.svg" alt="Skill" />
+  <img src="https://img.shields.io/badge/modules-14-0891b2.svg" alt="Modules" />
   <img src="https://img.shields.io/badge/focus-audit%20%2B%20robustness-f97316.svg" alt="Focus" />
 </p>
 
@@ -31,9 +32,30 @@ These skills help agents review projects more rigorously, with focus on:
 - robust fix recommendations;
 - audit reports with evidence, severity, confidence, and a fix plan.
 
-## Included Skills
+## Structure
 
-| Skill | Main focus |
+This repository is packaged as one progressive skill:
+
+```text
+skill/
+|-- SKILL.md
+|-- audits/
+|   |-- go-audit-optimizer.md
+|   |-- legal-audit-optimizer.md
+|   `-- ...
+|-- solana/
+|   |-- solana-anchor-audit-optimizer.md
+|   |-- solana-cpi-safety-guardian.md
+|   `-- ...
+`-- agents/
+    `-- openai.yaml
+```
+
+`skill/SKILL.md` is the entry point. It routes the agent to focused modules only when needed, keeping context usage efficient.
+
+## Included Modules
+
+| Module | Main focus |
 |---|---|
 | `go-audit-optimizer` | Go/Golang backend audits |
 | `rust-backend-audit-optimizer` | Rust backend audits |
@@ -108,7 +130,7 @@ Audits websites, apps, documentation, landing pages, and product pages for SEO, 
 
 ## Installation
 
-Each skill is a folder containing a `SKILL.md` file. To install the pack, copy the skill folders into your agent's skills directory.
+The install script copies the single `skill/` folder into your agent's skills directory as `shinka-labs-audit-pack`.
 
 ### Codex Installation
 
@@ -141,10 +163,8 @@ chmod +x install.sh
 Windows PowerShell manual install:
 
 ```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills"
-Get-ChildItem ".\ShinkaLabs-Skills" -Directory |
-  Where-Object { Test-Path (Join-Path $_.FullName "SKILL.md") } |
-  Copy-Item -Recurse -Destination "$env:USERPROFILE\.claude\skills\" -Force
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills\shinka-labs-audit-pack"
+Copy-Item -Recurse ".\ShinkaLabs-Skills\skill\*" "$env:USERPROFILE\.claude\skills\shinka-labs-audit-pack\" -Force
 ```
 
 Custom destination:
@@ -162,25 +182,21 @@ Preview without copying files:
 Windows PowerShell manual install:
 
 ```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills"
-Get-ChildItem ".\ShinkaLabs-Skills" -Directory |
-  Where-Object { Test-Path (Join-Path $_.FullName "SKILL.md") } |
-  Copy-Item -Recurse -Destination "$env:USERPROFILE\.codex\skills\" -Force
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills\shinka-labs-audit-pack"
+Copy-Item -Recurse ".\ShinkaLabs-Skills\skill\*" "$env:USERPROFILE\.codex\skills\shinka-labs-audit-pack\" -Force
 ```
 
 3. Restart the agent or reload skills if your environment requires it.
 
 ### Manual Installation
 
-Copy the skill folders into the Codex skills folder.
+Copy the `skill/` contents into a single skill folder named `shinka-labs-audit-pack`.
 
 Windows PowerShell:
 
 ```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills"
-Get-ChildItem ".\ShinkaLabs-Skills" -Directory |
-  Where-Object { Test-Path (Join-Path $_.FullName "SKILL.md") } |
-  Copy-Item -Recurse -Destination "$env:USERPROFILE\.codex\skills\" -Force
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills\shinka-labs-audit-pack"
+Copy-Item -Recurse ".\ShinkaLabs-Skills\skill\*" "$env:USERPROFILE\.codex\skills\shinka-labs-audit-pack\" -Force
 ```
 
 macOS/Linux:
@@ -198,8 +214,10 @@ For agents compatible with local skills:
 3. Make sure each skill keeps this structure:
 
 ```text
-skill-name/
-`-- SKILL.md
+shinka-labs-audit-pack/
+|-- SKILL.md
+|-- audits/
+`-- solana/
 ```
 
 4. Restart or reload the agent.
@@ -211,39 +229,39 @@ After installation, skills can activate automatically when the user's request ma
 Examples:
 
 ```text
-Use the go-audit-optimizer skill to audit this Go backend.
+Use the Shinka Labs Audit Pack to audit this Go backend.
 ```
 
 ```text
-Use the solana-anchor-audit-optimizer skill to review this Anchor program.
+Use the Shinka Labs Audit Pack to review this Anchor program.
 ```
 
 ```text
-Use the full-stack-consistency-enforcer skill to detect IDL and client drift.
+Use the Shinka Labs Audit Pack to detect IDL and client drift.
 ```
 
 ```text
-Use the solana-cpi-safety-guardian skill to audit this program's CPI integrations.
+Use the Shinka Labs Audit Pack to audit this program's CPI integrations.
 ```
 
 ```text
-Use the solana-invariant-guardian skill to extract and test this Solana program's invariants.
+Use the Shinka Labs Audit Pack to extract and test this Solana program's invariants.
 ```
 
 ```text
-Use the solana-program-upgrade-orchestrator skill to plan this Solana program upgrade.
+Use the Shinka Labs Audit Pack to plan this Solana program upgrade.
 ```
 
 ```text
-Use the solana-red-team-simulator skill to run an authorized adversarial audit.
+Use the Shinka Labs Audit Pack to run an authorized adversarial audit.
 ```
 
 ```text
-Use the legal-audit-optimizer skill to check whether this website has legal risks.
+Use the Shinka Labs Audit Pack to check whether this website has legal risks.
 ```
 
 ```text
-Use the seo-audit-optimizer skill to improve this project's search visibility.
+Use the Shinka Labs Audit Pack to improve this project's search visibility.
 ```
 
 ## Expected Audit Format
