@@ -1,0 +1,4 @@
+interface:
+  display_name: "Solana CPI Safety Guardian"
+  short_description: "Audit Solana composability and CPI safety."
+  default_prompt: "Audit this Solana program for composability and CPI safety. Review target program IDs, account metas, signer/writable flags, PDA signing, remaining_accounts, post-CPI reloads, external program compatibility, Token-2022 extensions, protocol integrations, compute cost, fuzzing, and validation. Provide findings, robust fixes, implementation steps, and tests."

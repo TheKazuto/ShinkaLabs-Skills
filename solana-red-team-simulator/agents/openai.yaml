@@ -1,0 +1,4 @@
+interface:
+  display_name: "Solana Red-Team Simulator"
+  short_description: "Run authorized adversarial Solana security audits."
+  default_prompt: "Run an authorized red-team simulation for this Solana program. Build a threat model, identify attack scenarios, review account validation, PDAs, CPI, upgrade authority, economic risks, arithmetic, Token/Token-2022, sysvars, realloc, concurrency, and generate safe local/devnet tests with robust fixes and validation steps."
