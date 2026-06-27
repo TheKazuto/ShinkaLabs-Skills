@@ -1,4 +1,0 @@
-interface:
-  display_name: "Solana Program Upgrade Orchestrator"
-  short_description: "Plan, audit, and orchestrate safe Solana program upgrades."
-  default_prompt: "Audit and orchestrate a safe upgrade for this Solana program. Review account versioning, backward compatibility, realloc/rent impact, migration strategy, upgrade authority, tests, deployment order, rollback plan, monitoring, and user communication. Provide findings, robust fixes, implementation steps, and validation."
