@@ -118,9 +118,41 @@ Each skill is a folder containing a `SKILL.md` file. To install the pack, copy t
 git clone https://github.com/TheKazuto/ShinkaLabs-Skills.git
 ```
 
-2. Copy the skills into the Codex skills folder.
+2. Install the skills.
 
-Windows:
+macOS/Linux/Git Bash:
+
+```bash
+cd ShinkaLabs-Skills
+chmod +x install.sh
+./install.sh
+```
+
+Custom destination:
+
+```bash
+./install.sh --dest "$HOME/.agents/skills"
+```
+
+Preview without copying files:
+
+```bash
+./install.sh --dry-run
+```
+
+Windows PowerShell manual install:
+
+```powershell
+Copy-Item -Recurse ".\ShinkaLabs-Skills\*" "$env:USERPROFILE\.codex\skills\"
+```
+
+3. Restart the agent or reload skills if your environment requires it.
+
+### Manual Installation
+
+Copy the skill folders into the Codex skills folder.
+
+Windows PowerShell:
 
 ```powershell
 Copy-Item -Recurse ".\ShinkaLabs-Skills\*" "$env:USERPROFILE\.codex\skills\"
@@ -131,8 +163,6 @@ macOS/Linux:
 ```bash
 cp -R ./ShinkaLabs-Skills/* ~/.codex/skills/
 ```
-
-3. Restart the agent or reload skills if your environment requires it.
 
 ### Other Agents
 
