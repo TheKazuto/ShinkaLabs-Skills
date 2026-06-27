@@ -125,7 +125,26 @@ macOS/Linux/Git Bash:
 ```bash
 cd ShinkaLabs-Skills
 chmod +x install.sh
-./install.sh
+./install.sh --target codex
+```
+
+### Claude Installation
+
+macOS/Linux/Git Bash:
+
+```bash
+cd ShinkaLabs-Skills
+chmod +x install.sh
+./install.sh --target claude
+```
+
+Windows PowerShell manual install:
+
+```powershell
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills"
+Get-ChildItem ".\ShinkaLabs-Skills" -Directory |
+  Where-Object { Test-Path (Join-Path $_.FullName "SKILL.md") } |
+  Copy-Item -Recurse -Destination "$env:USERPROFILE\.claude\skills\" -Force
 ```
 
 Custom destination:
@@ -143,7 +162,10 @@ Preview without copying files:
 Windows PowerShell manual install:
 
 ```powershell
-Copy-Item -Recurse ".\ShinkaLabs-Skills\*" "$env:USERPROFILE\.codex\skills\"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills"
+Get-ChildItem ".\ShinkaLabs-Skills" -Directory |
+  Where-Object { Test-Path (Join-Path $_.FullName "SKILL.md") } |
+  Copy-Item -Recurse -Destination "$env:USERPROFILE\.codex\skills\" -Force
 ```
 
 3. Restart the agent or reload skills if your environment requires it.
@@ -155,13 +177,16 @@ Copy the skill folders into the Codex skills folder.
 Windows PowerShell:
 
 ```powershell
-Copy-Item -Recurse ".\ShinkaLabs-Skills\*" "$env:USERPROFILE\.codex\skills\"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills"
+Get-ChildItem ".\ShinkaLabs-Skills" -Directory |
+  Where-Object { Test-Path (Join-Path $_.FullName "SKILL.md") } |
+  Copy-Item -Recurse -Destination "$env:USERPROFILE\.codex\skills\" -Force
 ```
 
 macOS/Linux:
 
 ```bash
-cp -R ./ShinkaLabs-Skills/* ~/.codex/skills/
+./install.sh --target codex
 ```
 
 ### Other Agents
