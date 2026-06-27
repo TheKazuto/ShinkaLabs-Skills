@@ -1,4 +1,0 @@
-interface:
-  display_name: "Full-Stack Consistency Enforcer"
-  short_description: "Audit and enforce full-stack IDL consistency."
-  default_prompt: "Audit this Solana full-stack project for consistency between on-chain Rust, IDL/schema, generated TypeScript client, frontend hooks, tests, docs, CI, and versioning. Detect drift, identify missing codegen or validation, recommend robust fixes, and provide implementation steps and validation."
